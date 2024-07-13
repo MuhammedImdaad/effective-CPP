@@ -1,4 +1,4 @@
-#include "item1.h"
+#include "item2.h"
 
 const int Game2::arraySize;
 
@@ -9,6 +9,4 @@ int main()
 
     Game2 g2 = Game2();
     g2.print(&g2.arraySize);
-
-
 }
