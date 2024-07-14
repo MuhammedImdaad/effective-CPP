@@ -21,3 +21,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 16: Use the same form in corresponding uses of new and delete
     * Item 17: Store newed objects in smart pointers in standalone statements
     * Item 18: Make interfaces easy to use correctly and hard to use incorrectly
+    * Item 19: Treat class design as type design
