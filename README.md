@@ -26,3 +26,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 21: Don't try to return a reference when you must return an object
     * Item 22: Declare data members private
     * Item 23: Prefer non-member non-friend functions to member functions
+    * Item 24: Declare non-member functions when type conversions should apply to all parameters
