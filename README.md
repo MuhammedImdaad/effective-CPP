@@ -24,3 +24,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 19: Treat class design as type design
     * Item 20: Prefer pass-by-reference-to-const to pass-by-value
     * Item 21: Don't try to return a reference when you must return an object
+    * Item 22: Declare data members private
