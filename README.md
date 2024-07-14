@@ -1,6 +1,6 @@
 # effective-CPP
 
-This is a curated list of learning content that I found best to be kept after going through scott mayers effective C++ book.
+This is a curated list of learning content that I found best to be kept after going through scott mayers effective C++ books.
 * https://www.amazon.com/Effective-Specific-Improve-Programs-Designs/dp/0321334876 
 
     * Item 1: View C++ as a federation of languages
@@ -20,3 +20,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 15: Provide access to raw resources in resource-managing classes
     * Item 16: Use the same form in corresponding uses of new and delete
     * Item 17: Store newed objects in smart pointers in standalone statements
+    * Item 18: Make interfaces easy to use correctly and hard to use incorrectly

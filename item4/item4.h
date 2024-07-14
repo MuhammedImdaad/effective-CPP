@@ -23,7 +23,7 @@ class System
 
 public:
     System(const File& file, int id1, int& id2)
-        : file1(file), file1ID(1), file2ID(id2)
+        : file1(file), file1ID(id1), file2ID(id2)
     {
         file2 = file;
     }
