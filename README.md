@@ -34,3 +34,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 25: Consider support for a non-throwing swap
     Implementations
     * Item 26: Postpone variable definitions as long as possible
+    * Item 27: Minimize casting
