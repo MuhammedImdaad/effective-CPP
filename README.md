@@ -37,3 +37,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 27: Minimize casting
     * Item 28: Avoid returning “handles” to object internals
     * Item 29: Strive for exception-safe code
+    * Item 30: Understand the ins and outs of inlining
