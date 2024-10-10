@@ -40,3 +40,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 30: Understand the ins and outs of inlining
     * Item 31: Minimize compilation dependencies between files
     * Item 32: Make sure public inheritance models “is-a.”
+    * Item 33: Avoid hiding inherited names
