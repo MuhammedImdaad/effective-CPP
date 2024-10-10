@@ -1,6 +1,6 @@
 ### Minimize compilation dependencies between files
-* Declaration - simple stating such thing exist(a class)
-* Definition - defining such things (methods and attributes)
+* Declaration - tells compilers about the name and type of something
+* Definition - provides compilers with the details a declaration omits. For an object, the definition is where compilers set aside memory for the object. For a function or a function template, the definition provides the code body. For a class or a class template, the definition lists the members of the class or template
 * Implementation - implementing such things (method definitions)
 
 To improve build times and reduce unnecessary dependencies, limit how much one file depends on changes in another.  If any of the header files are changed, or if any of the header files they depend on changes, the file containing the class must be recompiled, as must any files that use the class. One way to solve this is using Forward Declarations Instead of Includes. Difficulty with forward-declaring everything has to do with the need for compilers to know the size of objects during compilation.
