@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(item VERSION 0.1.0 LANGUAGES C CXX)
 
 # Add the executable
-add_executable(item main.cpp)
+add_executable(item main.cpp Widget.cpp WidgetImpl.cpp) 
 
 # You may need to add additional settings here, such as compiler flags or include directories
 include_directories(.)
