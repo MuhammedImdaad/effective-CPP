@@ -43,3 +43,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 33: Avoid hiding inherited names
     * Item 34: Differentiate between inheritance of interface and inheritance of implementation
     * Item 35: Consider alternatives to virtual functions
+    * Item 36: Never redefine an inherited non-virtual function
