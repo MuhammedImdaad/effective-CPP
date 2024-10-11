@@ -48,3 +48,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 37: Never redefine a function's inherited default parameter value
     * Item 38: Model “has-a” or “is-implemented-in-terms-of” through composition
     * Item 39: Use private inheritance judiciously
+    * Item 40: Use multiple inheritance judiciously
