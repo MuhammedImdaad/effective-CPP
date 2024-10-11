@@ -7,6 +7,7 @@ int main()
     {
         double x = 15.89;
         std::cout << x << std::endl;
+        std::cout << ::x << std::endl;
     }
 
     Derived d;
