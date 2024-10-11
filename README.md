@@ -42,3 +42,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 32: Make sure public inheritance models “is-a.”
     * Item 33: Avoid hiding inherited names
     * Item 34: Differentiate between inheritance of interface and inheritance of implementation
+    * Item 35: Consider alternatives to virtual functions
