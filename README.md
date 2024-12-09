@@ -49,3 +49,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 38: Model “has-a” or “is-implemented-in-terms-of” through composition
     * Item 39: Use private inheritance judiciously
     * Item 40: Use multiple inheritance judiciously
+    * Item 41: Understand implicit interfaces and compile-time polymorphism
+    * Item 42: Understand the two meanings of typename
