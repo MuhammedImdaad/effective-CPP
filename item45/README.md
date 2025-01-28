@@ -1,0 +1,6 @@
+### Use member function templates to accept “all compatible types.”
+One of the things that real pointers do well is support implicit conversions. Derived class pointers implicitly convert into base class pointers, pointers to non-const objects convert into pointers to const objects, etc. Emulating such conversions in user-defined template classes is tricky. There is no inherent relationship among different instantiations of the same template. For that we need a constructor template. Ones that create one object from another object whose type is a different instantiation of the same template are known as generalized copy constructors. The utility of member function templates isn't limited to constructors. Another common role for them is in support for assignment. However declaring a generalized copy constructor (a member template) in a class doesn't keep compilers from generating their own copy constructor (a non-template). 
+#### THINGS TO REMEMBER
+* Use member function templates to generate functions that accept all compatible types.
+
+* If you declare member templates for generalized copy construction or generalized assignment, you'll still need to declare the normal copy constructor and copy assignment operator, too.

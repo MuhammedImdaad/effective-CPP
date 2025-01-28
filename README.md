@@ -54,3 +54,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 42: Understand the two meanings of typename
     * Item 43: Know how to access names in templatized base classes
     * Item 44: Factor parameter-independent code out of templates
+    * Item 45: Use member function templates to accept “all compatible types.”
