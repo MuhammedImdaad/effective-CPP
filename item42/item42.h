@@ -6,8 +6,10 @@ void print2nd(const C& container)               // container;
   if (container.size() >= 2) {
     //nested dependent type name
     typename C::const_iterator iter(container.begin()); // get iterator to 1st element
-    //error: dependent-name ‘C::const_iterator’ is parsed as a non-type, but instantiation yields a type
+    //compiler error if typename is not specified : dependent-name ‘C::const_iterator’ is parsed as a non-type, but instantiation yields a type
     ++iter;                                    // move iter to 2nd element
+    
+    //if not for typename, value will be assumed to be a static data member (not a type)
     typename C::value_type value = *iter;                         // copy that element to an int
     std::cout << value << std::endl;                        // print the int
   }

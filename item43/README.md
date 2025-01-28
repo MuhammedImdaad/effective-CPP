@@ -1,0 +1,7 @@
+### Know how to access names in templatized base classes
+when a templatized base class is inherited, the template parameter, won't be known until later. Without knowing what the template is, there's no way to know what the Base class looks like. It also recognizes that base class templates may be specialized and that such specializations may not offer the same interface as the general template. Therefore compiles generally refuses to look in templatized base classes for inherited names. If we have to somehow disable C++'s “don't look in templatized base classes” behavior. There are three ways to do this. Check example. 
+* First, you can preface calls to base class functions with “this->”
+* Second, you can employ a using declaration (Although a using declaration will work both here and in Item 33, the problems being solved are different. Here, the situation isn't that base class names are hidden by derived class names, it's that compilers don't search base class scopes unless we tell them to.)
+* A final way is to explicitly specify that the function being called is in the base class (less preferred)
+#### THINGS TO REMEMBER
+* In derived class templates, refer to names in base class templates via a “this->” prefix, via using declarations, or via an explicit base class qualification.
