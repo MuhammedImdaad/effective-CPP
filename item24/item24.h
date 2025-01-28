@@ -11,7 +11,7 @@ namespace num
         Rational(int num = 0, int den = 1)
             : numerator(num), denominator(den) {}
 
-        const Rational operator*(const Rational &other);
+        const Rational operator*(const Rational &other); //not required anymore
 
         void print() const
         {
