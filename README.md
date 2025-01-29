@@ -58,3 +58,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 46: Define non-member functions inside templates when type conversions are desired
     * Item 47: Use traits classes for information about types
     * Item 48: Be aware of template metaprogramming
+    8. Customizing new and delete
+    * Item 49: Understand the behavior of the new-handler
