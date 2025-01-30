@@ -1,7 +1,7 @@
-# effective-CPP
+# Effective C++
 
 This is a curated list of learning content that I found best to be kept after going through scott mayers effective C++ books.
-* https://www.amazon.com/Effective-Specific-Improve-Programs-Designs/dp/0321334876 
+* [Effective C++, Third Edition](https://www.amazon.com/Effective-Specific-Improve-Programs-Designs/dp/0321334876) 
 
     1. Accustoming Yourself to C++
     * Item 1: View C++ as a federation of languages
@@ -67,3 +67,7 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 53: Pay attention to compiler warnings
     * Item 54: Familiarize yourself with the standard library, including TR1
     * Item 55: Familiarize yourself with Boost
+
+* [Effective Modern C++](https://www.amazon.com/Effective-Modern-Specific-Ways-Improve-ebook/dp/B00PGCMGDQ)
+    
+    1. Deducing Types
