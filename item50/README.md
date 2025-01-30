@@ -1,5 +1,5 @@
 ### Understand when it makes sense to replace new and delete
-The topic of this Item is knowing when it can make sense to replace the default versions of new and delete, either globally or on a per-class basis. Writing a custom memory manager that almost works is pretty easy. Writing one that works well is a lot harder. An open source allocator named Pool library from Boost library offers allocators tuned for one of the most common situations in which custom memory management is helpful. Allocation of a large number of small objects.
+The topic of this Item is knowing when it can make sense to replace the default versions of new and delete, either globally or on a per-class basis. An open source allocator named Pool library from Boost library offers allocators tuned for one of the most common situations in which custom memory management is helpful. Allocation of a large number of small objects. Writing a custom memory manager that almost works is pretty easy. Writing one that works well is a lot harder.
 
 * To detect usage errors
 * To collect statistics about the use of dynamically allocated memory
