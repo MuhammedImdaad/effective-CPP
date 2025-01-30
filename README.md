@@ -63,3 +63,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 50: Understand when it makes sense to replace new and delete
     * Item 51: Adhere to convention when writing new and delete
     * Item 52: Write placement delete if you write placement new
+    9. Miscellany
+    * Item 53: Pay attention to compiler warnings
