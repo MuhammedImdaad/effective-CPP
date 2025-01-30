@@ -66,3 +66,4 @@ This is a curated list of learning content that I found best to be kept after go
     9. Miscellany
     * Item 53: Pay attention to compiler warnings
     * Item 54: Familiarize yourself with the standard library, including TR1
+    * Item 55: Familiarize yourself with Boost

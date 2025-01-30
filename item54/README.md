@@ -7,7 +7,7 @@ It's worth reviewing the major parts of the standard C++ library specified by C+
 * An exception hierarchy
 * C89's standard library
 
-TR1 specifies 14 new components and all new utilities were later incorporated into C++11 and beyond.
+TR1 specifies 14 new components and all new utilities were later incorporated into C++11 and beyond. The overall guideline is that developers should leverage the C++ Standard Library to avoid reinventing the wheel and benefit from well-tested, efficient implementations.
 ### Things to Remember
 * The primary standard C++ library functionality consists of the STL, iostreams, and locales. The C99 standard library is also included.
 
