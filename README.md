@@ -60,3 +60,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 48: Be aware of template metaprogramming
     8. Customizing new and delete
     * Item 49: Understand the behavior of the new-handler
+    * Item 50: Understand when it makes sense to replace new and delete
