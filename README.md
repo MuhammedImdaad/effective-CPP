@@ -71,3 +71,4 @@ This is a curated list of learning content that I found best to be kept after go
 * [Effective Modern C++](https://www.amazon.com/Effective-Modern-Specific-Ways-Improve-ebook/dp/B00PGCMGDQ)
     
     1. Deducing Types
+    * Item 1: Understand template type deduction
