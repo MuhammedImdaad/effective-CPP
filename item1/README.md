@@ -27,6 +27,7 @@ f(name);               // T is deduced to be const char [13], and the param's ty
 * Case 2: ParamType is a Universal Reference
 ```
 If expr is an lvalue, both T and ParamType are deduced to be lvalue references. If expr is an rvalue, the “normal” (i.e., Case 1) rules apply.
+A useful heuristic to determine whether an expression is an lvalue is to ask if you can take its address. If you can, it typically is. If you can’t, it’s usually an rvalue. 
 
 template<typename T>
 void f(T&& param);       // param is now a universal reference
