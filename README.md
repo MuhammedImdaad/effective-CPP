@@ -72,3 +72,4 @@ This is a curated list of learning content that I found best to be kept after go
     
     1. Deducing Types
     * Item 1: Understand template type deduction
+    * Item 2: Understand auto type deduction
