@@ -78,3 +78,4 @@ This is a curated list of learning content that I found best to be kept after go
     2. auto
     * Item 5: Prefer auto to explicit type declarations
     * Item 6: Use the explicitly typed initializer idiom when auto deduces undesired types
+    * Item 7: Distinguish between () and {} when creating objects
