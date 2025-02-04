@@ -77,3 +77,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 4: Know how to view deduced types
     2. auto
     * Item 5: Prefer auto to explicit type declarations
+    * Item 6: Use the explicitly typed initializer idiom when auto deduces undesired types

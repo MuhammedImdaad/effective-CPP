@@ -3,6 +3,20 @@
 #include <memory>
 #include <functional>
 
+class Closure
+{
+    int& x;
+
+public:
+    Closure(int& value)
+        : x(value) {}
+
+    void operator()(int y)
+    {
+        x = y;
+    }
+};
+
 // usecase 2
 template <typename It>
 void usecase2(It b, It e)

@@ -8,6 +8,16 @@
 using boost::typeindex::type_id_with_cvr;
 int main()
 {
+    //implements closures using lambda expressions with captured variables
+    int x = 10;
+
+    Closure closure98(x);
+    closure98(20);
+    std::cout << "closure98 : " << x << std::endl;
+    auto closure11 = [&x](int y){x = y;};
+    closure11(40);
+    std::cout << "closure11 : " << x << std::endl;
+
     // usecase 1
     int x1; // potentially uninitialized
     // auto x2; // error! cannot deduce 'auto' type (initializer required)
@@ -51,5 +61,4 @@ int main()
     std::cout << "type of size11 = "
               << type_id_with_cvr<decltype(size11)>().pretty_name()
               << '\n';
-
 }
