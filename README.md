@@ -81,3 +81,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 7: Distinguish between () and {} when creating objects
     * Item 8: Prefer nullptr to 0 and NULL
     * Item 9: Prefer alias declarations to typedefs
+    * Item 10: Prefer scoped enums to unscoped enums
