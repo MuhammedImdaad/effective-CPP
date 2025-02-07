@@ -82,3 +82,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 8: Prefer nullptr to 0 and NULL
     * Item 9: Prefer alias declarations to typedefs
     * Item 10: Prefer scoped enums to unscoped enums
+    * Item 11: Prefer deleted functions to private undefined ones
