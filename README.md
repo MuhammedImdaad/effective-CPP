@@ -84,3 +84,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 10: Prefer scoped enums to unscoped enums
     * Item 11: Prefer deleted functions to private undefined ones
     * Item 12: Declare overriding functions override
+    * Item 13: Prefer const_iterators to iterators
