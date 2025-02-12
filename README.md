@@ -87,3 +87,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 13: Prefer const_iterators to iterators
     * Item 14: Declare functions noexcept if they won’t emit exceptions
     * Item 15: Use constexpr whenever possible
+    * Item 16: Make const member functions thread safe
