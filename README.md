@@ -86,3 +86,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 12: Declare overriding functions override
     * Item 13: Prefer const_iterators to iterators
     * Item 14: Declare functions noexcept if they won’t emit exceptions
+    * Item 15: Use constexpr whenever possible
