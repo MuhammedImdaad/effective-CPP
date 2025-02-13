@@ -78,6 +78,7 @@ This is a curated list of learning content that I found best to be kept after go
     2. auto
     * Item 5: Prefer auto to explicit type declarations
     * Item 6: Use the explicitly typed initializer idiom when auto deduces undesired types
+    3. Moving to Modern C++
     * Item 7: Distinguish between () and {} when creating objects
     * Item 8: Prefer nullptr to 0 and NULL
     * Item 9: Prefer alias declarations to typedefs
@@ -89,3 +90,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 15: Use constexpr whenever possible
     * Item 16: Make const member functions thread safe
     * Item 17: Understand special member function generation
+    4. Smart Pointers
+    * Item 18: Use std::unique_ptr for exclusive-ownership resource management
