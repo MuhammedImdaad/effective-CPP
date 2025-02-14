@@ -27,7 +27,8 @@ enum class Type
 
 auto createInvestment(Type type)
 {
-    std::unique_ptr<Investment> ptr;
+    auto customDelete = [](Investment* ptr){std::cout << __PRETTY_FUNCTION__ << std::endl; delete ptr;};
+    std::unique_ptr<Investment, decltype(customDelete)> ptr(nullptr, customDelete);
 
     switch (type)
     {
@@ -40,5 +41,6 @@ auto createInvestment(Type type)
     default:
         ptr.reset(new Investment);
     }
-    return ptr;
+
+    return ptr; // compiler automatically applies the move semantics to transfer ownership
 }

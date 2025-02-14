@@ -92,3 +92,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 17: Understand special member function generation
     4. Smart Pointers
     * Item 18: Use std::unique_ptr for exclusive-ownership resource management
+    * Item 19: Use std::shared_ptr for shared-ownership resource management
