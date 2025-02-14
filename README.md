@@ -93,3 +93,4 @@ This is a curated list of learning content that I found best to be kept after go
     4. Smart Pointers
     * Item 18: Use std::unique_ptr for exclusive-ownership resource management
     * Item 19: Use std::shared_ptr for shared-ownership resource management
+    * Item 20: Use std::weak_ptr for std::shared_ptr-like pointers that can dangle
