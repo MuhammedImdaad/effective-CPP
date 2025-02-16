@@ -6,7 +6,7 @@ std::weak_ptrs can be useful due to the fact that they can detect when they dang
 * the Observer design pattern. 
 * child-parent abnormal relationship    
 
-From an efficiency perspective, the std::weak_ptr story is essentially the same as that for std::shared_ptr !
+From an efficiency perspective, the std::weak_ptr story is essentially the same as that for std::shared_ptr !. The control block contains a second reference count, one that tallies how many std::weak_ptrs refer to the control block. As long as std::weak_ptrs refer to a control block (the weak count is greater than zero), that control block continue to exist. And as long as a control block exists, the memory containing it remain allocated.
 ### THINGS TO REMEMBER
 * Use std::weak_ptr for std::shared_ptr-like pointers that can dangle.
 * Potential use cases for std::weak_ptr include caching, observer lists, and the prevention of std::shared_ptr cycles.
