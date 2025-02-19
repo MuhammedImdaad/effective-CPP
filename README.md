@@ -98,3 +98,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 22: When using the Pimpl Idiom, define special member functions in the implementation file
     5. Rvalue References, Move Semantics, and Perfect Forwarding
     * Item 23: Understand std::move and std::forward
+    * Item 24: Distinguish universal references from rvalue references
