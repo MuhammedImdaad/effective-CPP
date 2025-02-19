@@ -96,3 +96,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 20: Use std::weak_ptr for std::shared_ptr-like pointers that can dangle
     * Item 21: Prefer std::make_unique and std::make_shared to direct use of new
     * Item 22: When using the Pimpl Idiom, define special member functions in the implementation file
+    5. Rvalue References, Move Semantics, and Perfect Forwarding
+    * Item 23: Understand std::move and std::forward
