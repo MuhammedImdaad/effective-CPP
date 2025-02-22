@@ -100,3 +100,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 23: Understand std::move and std::forward
     * Item 24: Distinguish universal references from rvalue references
     * Item 25: Use std::move on rvalue references, std::forward on universal references
+    * Item 26: Avoid overloading on universal references
