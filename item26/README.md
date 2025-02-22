@@ -24,7 +24,7 @@ public:
 };
 
 Person p("Nancy");
-auto cloneOfP(p);                   // create new Person from con-const p;
+auto cloneOfP(p);                   // create new Person from non-const p;
                                     // this won't compile!
 ```
 
