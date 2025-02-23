@@ -103,3 +103,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 26: Avoid overloading on universal references
     * Item 27: Familiarize yourself with alternatives to overloading on universal references
     * Item 28: Understand reference collapsing
+    * Item 29: Assume that move operations are not present, not cheap, and not used
