@@ -3,7 +3,7 @@ Lambdas really make C++ a more pleasant programming language.
 lambda vocabulary,
 * lambda expression - expression that is part of the source code [capture] \(arguments) {body}
 * closure - the runtime object created by a lambda
-* closure class - class from which a closure is instantiated
+* closure class - class generated from the lambda expression, from which a closure is instantiated
 
 Long-term, it’s simply better software engineering to explicitly list the local variables and parameters that a lambda depends on.  
 There are two default capture modes in C++11: by-reference and by-value. A by-reference capture causes a closure to contain a reference to a local variable or to a parameter that’s available in the scope where the lambda is defined. If the lifetime of a closure created from that lambda exceeds the lifetime of the local variable or parameter, the reference in the closure will dangle. Thus undefined behavior (Crash, garbage values, Work correctly by chance). With an explicit capture, it’s easier to see that the viability of the lambda is dependent on divisor’s lifetime.  
