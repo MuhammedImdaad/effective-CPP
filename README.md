@@ -105,3 +105,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 28: Understand reference collapsing
     * Item 29: Assume that move operations are not present, not cheap, and not used
     * Item 30: Familiarize yourself with perfect forwarding failure cases
+    6. Lambda Expressions
+    * Item 31: Avoid default capture modes
