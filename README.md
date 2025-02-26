@@ -109,3 +109,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 31: Avoid default capture modes
     * Item 32: Use init capture to move objects into closures
     * Item 33: Use decltype on auto&& parameters to std::forward them
+    * Item 34: Prefer lambdas to std::bind
