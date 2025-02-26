@@ -2,7 +2,7 @@
 
 int main()
 {
-    auto w1 = std::make_unique<Widget>(100);
+    auto w1{std::make_unique<Widget>(100)};
     auto w2 = std::make_unique<Widget>(200);
     std::cout << __PRETTY_FUNCTION__ << " " << w1.get() << " " << w2.get() << std::endl;
 
