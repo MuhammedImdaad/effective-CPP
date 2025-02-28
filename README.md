@@ -110,3 +110,5 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 32: Use init capture to move objects into closures
     * Item 33: Use decltype on auto&& parameters to std::forward them
     * Item 34: Prefer lambdas to std::bind
+    7. The Concurrency API
+    * Item 35: Prefer task-based programming to thread-based
