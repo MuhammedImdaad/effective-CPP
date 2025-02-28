@@ -113,3 +113,4 @@ This is a curated list of learning content that I found best to be kept after go
     7. The Concurrency API
     * Item 35: Prefer task-based programming to thread-based
     * Item 36: Specify std::launch::async if asynchronicity is essential
+    * Item 37: Make std::threads unjoinable on all paths
