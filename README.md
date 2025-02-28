@@ -112,3 +112,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 34: Prefer lambdas to std::bind
     7. The Concurrency API
     * Item 35: Prefer task-based programming to thread-based
+    * Item 36: Specify std::launch::async if asynchronicity is essential
