@@ -119,3 +119,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 40: Use std::atomic for concurrency, volatile for special memory
     8. Tweaks
     * Item 41: Consider pass by value for copyable parameters that are cheap to move and always copied
+    * Item 42: Consider emplacement instead of insertion
