@@ -1,3 +1,0 @@
-## 
-
-### THINGS TO REMEMBER

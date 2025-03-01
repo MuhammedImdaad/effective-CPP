@@ -1,6 +1,7 @@
 # Effective C++
 
-This is a curated list of learning content that I found best to be kept after going through scott mayers effective C++ books.
+*This is a curated and organized summary of learning content, featuring key takeaways, notes, and code snippets from Scott Meyers' Effective C++ books.*
+
 * [Effective C++, Third Edition](https://www.amazon.com/Effective-Specific-Improve-Programs-Designs/dp/0321334876) 
 
     1. Accustoming Yourself to C++
