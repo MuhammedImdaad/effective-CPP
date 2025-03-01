@@ -116,3 +116,4 @@ This is a curated list of learning content that I found best to be kept after go
     * Item 37: Make std::threads unjoinable on all paths
     * Item 38: Be aware of varying thread handle destructor behavior
     * Item 39: Consider void futures for one-shot event communication
+    * Item 40: Use std::atomic for concurrency, volatile for special memory
