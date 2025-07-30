@@ -22,7 +22,7 @@ const char name[] = "J. P. Briggs";  // name's type is const char[13]
 f(x);                   // T is int, param's type is int&
 f(cx);                  // T is const int, param's type is const int&
 f(rx);                  // T is const int, param's type is const int&
-f(name);               // T is deduced to be const char [13], and the param's type is const char (&)[13]
+f(name);                // T is deduced to be const char [13], and the param's type is const char (&)[13]
 ```
 * Case 2: ParamType is a Universal Reference
 ```

@@ -2,7 +2,7 @@
 
 In C++, you should therefore approach class design with the same care that language designers lavish on the design of the language's built-in types. Virtually every class requires that you confront the following questions
 
-*  How should objects of your new type be created and destroyed?
+* How should objects of your new type be created and destroyed?
 * How should object initialization differ from object assignment? 
 * What does it mean for objects of your new type to be passed by value?
 * What are the restrictions on legal values for your new type?

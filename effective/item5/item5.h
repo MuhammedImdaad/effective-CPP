@@ -15,6 +15,9 @@ public:
 
     File &operator=(const File &other)
     {
+        // copies the contents of the string referenced by 
+        // other.name into the string referenced by name. 
+        // It does not change what name refers to.
         name = other.name;
         return *this;
     }

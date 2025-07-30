@@ -13,7 +13,7 @@ public:
     explicit operator int() const
     {
         return value;
-    }
+    } 
 
     operator float() const
     {

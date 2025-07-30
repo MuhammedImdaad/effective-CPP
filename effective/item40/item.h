@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class File
+class File // virtual base class
 {
 public:
     File(int x) { cout << __PRETTY_FUNCTION__ << endl; }
@@ -30,7 +30,7 @@ public:
 class IOFile : public InputFile, public OutputFile
 {
 public:
-    IOFile(int x = 0) : InputFile(x), OutputFile(x)
+    IOFile(int x = 0) : InputFile(x), OutputFile(x)// , File(x)
     { // add File(x) if you want to explicitly call the parameterized constructor
         cout << __PRETTY_FUNCTION__ << endl;
     }

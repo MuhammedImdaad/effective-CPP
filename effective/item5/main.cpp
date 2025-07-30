@@ -15,7 +15,7 @@ int main()
     std::cout << file2.getName() << std::endl;
     file1 = file2;
     std::cout << file1.getName() << std::endl;
-    std::cout << file1.getName() << std::endl;
+    std::cout << file2.getName() << std::endl;
 
     // you're changing the content of the string that name refers to.
     // However, file1 and file2 still hold references to their respective original strings.
