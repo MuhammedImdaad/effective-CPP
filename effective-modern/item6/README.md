@@ -1,8 +1,9 @@
 ## Use the explicitly typed initializer idiom when auto deduces undesired types
 As a general rule, “invisible” proxy classes don’t play well with auto.     
 
-std::vector<bool> is specified to represent its bools in packed form, one bit per bool. That creates a problem for std::vector<bool>’s operator[], because operator[] for std::vector<T> is supposed to return a T&, but C++ forbids references to bits.    
-T& is what std::vector::operator[] returns for every type except bool. operator[] for std::vector<bool> doesn’t return a reference to an element of the container. Instead, it returns an object of type std::vector<bool>::reference (a class nested inside std::vector<bool>). This can create a problem in rvalue like this.  
+std::vector\<bool> is specified to represent its bools in packed form, one bit per bool. That creates a problem for std::vector\<bool>’s operator[], because operator[] for std::vector<T> is supposed to return a T&, but C++ forbids references to bits.    
+T& is what std::vector::operator[] returns for every type except bool. operator[] for std::vector\<bool> doesn’t return a reference to an element of the container. Instead, it returns an object of type std::vector\<bool>::reference (a class nested inside std::vector\<bool>). This can create a problem in rvalue like this.  
+
 `auto highPriority = createVector(w)[5];`. highPriority no longer has a valid reference because the object is destroyed.    
 However auto itself isn’t the problem. The problem is that auto isn’t deducing the type you want it to deduce. The solution is to force a different type deduction. The way you do that is the explicitly typed initializer idiom.
 simply put      

@@ -6,6 +6,7 @@ void f(ParamType param);
 
 f(expr);  
 ```
+Note that in most cases it is truly intuitive. That being said, 
 There are three cases:
 * Case 1 : ParamType is a pointer or reference type, but not a universal reference. (Universal references are described in Item 24.)
 ```
@@ -26,7 +27,8 @@ f(name);                // T is deduced to be const char [13], and the param's t
 ```
 * Case 2: ParamType is a Universal Reference
 ```
-If expr is an lvalue, both T and ParamType are deduced to be lvalue references. If expr is an rvalue, the “normal” (i.e., Case 1) rules apply.
+If expr is an lvalue, both T and ParamType are deduced to be lvalue references. It's the only situation in template type deduction where T is deduced to be a reference. 
+If expr is an rvalue, the “normal” (i.e., Case 1) rules apply.
 A useful heuristic to determine whether an expression is an lvalue is to ask if you can take its address. If you can, it typically is. If you can’t, it’s usually an rvalue. 
 
 template<typename T>

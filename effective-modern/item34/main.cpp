@@ -5,13 +5,14 @@ using namespace std::chrono;
 using namespace std::literals;
 
 using Time = steady_clock::time_point;
+using Duration = steady_clock::duration;
+
 enum class Sound
 {
     Beep,
     Siren,
     Whistle
 };
-using Duration = steady_clock::duration;
 
 void setAlarm(Time t, Sound s, Duration d)
 {
@@ -25,21 +26,21 @@ int main()
     We can write a lambda that revises setAlarm’s interface
     so that only a sound needs to be specified:*/
 
-    setAlarm(steady_clock::now() + hours(1), Sound::Siren, seconds(30)); // 1 hour from now
+    setAlarm(steady_clock::now() + hours(1), Sound::Siren, seconds(30)); // general way
 
     auto lambda = [](Sound s)
     {
         std::cout << __PRETTY_FUNCTION__ << std::endl;
         using namespace std::chrono;
-        setAlarm(steady_clock::now() + 1h, s, 30s);
+        setAlarm(steady_clock::now() + 1h, s, 30s); // 1 hour from now for 30 seconds
     };
 
     // do something, time passes
 
-    lambda(Sound::Whistle); // 1 hour from now
+    lambda(Sound::Whistle); 
 
     // do something, time passes
 
-    lambda(Sound::Beep); // 1 hour from now
+    lambda(Sound::Beep);
     return 0;
 }

@@ -3,8 +3,8 @@ When you define std::async, what you’re asking to do is requesting that the fu
 * std::launch::`async` - policy means that f must be run `asynchronously`, run on a different thread.
 * std::launch::`deferred` - policy means that f may run only when `get` or `wait` is called on the future returned by std::async. That is, f’s execution is `deferred` until such a call is made. When `get` or `wait` is invoked, f will execute `synchronously`, the caller will block until f finishes running. If neither `get` nor `wait` is called, f will never run. (not much different to directly calling a function when it is needed!)
 
-std::async’s `default` launch policy, the one it uses if you don’t expressly specify one, it’s these `or-ed` together. The default policy permits f to be run either asynchronously or synchronously.   
-Thus sing std::async with the default launch policy has some interesting implications.
+std::async’s `default` launch policy, the one it uses if you don’t expressly specify one, it’s these `or-ed` together (`std::launch::async | std::launch::deferred`). The default policy permits f to be run either asynchronously or synchronously.   
+Thus stating std::async with the default launch policy has some interesting implications.
 * It’s not possible to predict whether f will run concurrently with t, because f might be scheduled to run deferred.
 * It’s not possible to predict whether f runs on a thread different from the thread invoking get or wait on fut.
 * It may not be possible to predict whether f runs at all, because it may not be possible to guarantee that get or wait will be called on fut along every path through the program.

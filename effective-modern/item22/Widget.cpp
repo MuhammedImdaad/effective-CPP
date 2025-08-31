@@ -22,4 +22,4 @@ Widget::Widget()
     std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
-Widget::~Widget() = default;
+Widget::~Widget() = default; // define the body of Widget’s destructor only after Widget::Impl has been defined as a complete type

@@ -6,15 +6,17 @@
 #include <unordered_map>
 
 using boost::typeindex::type_id_with_cvr;
+
 int main()
 {
-    //implements closures using lambda expressions with captured variables
+    // implements closures using lambda expressions with captured variables
     int x = 10;
 
     Closure closure98(x);
     closure98(20);
     std::cout << "closure98 : " << x << std::endl;
-    auto closure11 = [&x](int y){x = y;};
+    auto closure11 = [&x](int y)
+    { x = y; };
     closure11(40);
     std::cout << "closure11 : " << x << std::endl;
 
@@ -22,29 +24,6 @@ int main()
     int x1; // potentially uninitialized
     // auto x2; // error! cannot deduce 'auto' type (initializer required)
     auto x3 = 0; // fine, x3's value is well-defined
-
-    // usecase 4
-    // The official return type of v.size() is std::vector<int>::size_type, but few developers are aware of that.
-    std::vector<double> v;
-    int size98 = v.size();
-    auto size11 = v.size();
-
-    // usecase 5
-    std::unordered_map<std::string, int> m{{"hi", 1}};
-    
-    // invalid initialization of reference of type ‘std::pair<std::__cxx11::basic_string<char>, int>&
-    for (const std::pair<std::string, int> &p : m)
-    {
-        // repeating a temporary object of the type that p wants to bind to by copying each object in m, 
-        // then binding the reference p to that temporary object. At the end of each loop iteration, 
-        // the temporary object will be destroyed
-        
-        // p.second = 2;
-    }
-
-    for (auto &p : m) // const std::pair<const std::string, int> &p
-    {
-    }
 
     std::cout << "type of unknownType11 = "
               << type_id_with_cvr<decltype(unknownType11)>().pretty_name()
@@ -58,7 +37,30 @@ int main()
               << type_id_with_cvr<decltype(unknownFunc)>().pretty_name()
               << '\n';
 
+    // usecase 4
+    // The official return type of v.size() is std::vector<int>::size_type, but few developers are aware of that.
+    std::vector<double> v;
+    int size98 = v.size();
+    auto size11 = v.size();
+
     std::cout << "type of size11 = "
               << type_id_with_cvr<decltype(size11)>().pretty_name()
               << '\n';
+
+    // usecase 5
+    std::unordered_map<std::string, int> m{{"hi", 1}};
+
+    // invalid initialization of reference of type ‘std::pair<std::__cxx11::basic_string<char>, int>&
+    for (const std::pair<std::string, int> &p : m)
+    {
+        // repeating a temporary object of the type that p wants to bind to by copying each object in m,
+        // then binding the reference p to that temporary object. At the end of each loop iteration,
+        // the temporary object will be destroyed
+
+        // p.second = 2;
+    }
+
+    for (auto &p : m) // std::pair<const std::string, int> &p
+    {
+    }
 }

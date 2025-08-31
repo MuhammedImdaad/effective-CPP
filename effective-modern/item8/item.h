@@ -7,9 +7,9 @@ class Widget
 {
 };
 
-void f1(std::shared_ptr<Widget> spw) {};    // call these only when
-void f2(std::unique_ptr<Widget> upw) {}; // the appropriate
-void f3(Widget *pw) {};                    // mutex is locked
+void f1(std::shared_ptr<Widget> spw) {};
+void f2(std::unique_ptr<Widget> upw) {};
+void f3(Widget *pw) {};
 
 template <typename FuncType,
           typename PtrType>

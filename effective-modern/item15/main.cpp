@@ -21,5 +21,12 @@ int main()
 
     constexpr auto mid = midPoint(p1, p2);
     std::cout << mid.getX() << ", " << mid.getY() << std::endl;
+
+    Point p3(10, 20);
+    Point p4(20, 40);
+
+    auto out = midPoint(p3, p4);
+    std::cout << out.getX() << ", " << out.getY() << std::endl;
+    
     return 0;
 }

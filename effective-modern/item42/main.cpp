@@ -8,7 +8,7 @@ int main()
     names.emplace_back("rogan");
     names.emplace_back(10, 'x');
     names.push_back(std::string(10, 'y'));
-    // names.push_back(std::string(10, 'z')); // error: no matching function for call
+    names.emplace_back(std::string(10, 'z'));
 
     for (auto& name : names)
         std::cout << name << std::endl;

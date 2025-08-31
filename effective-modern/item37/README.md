@@ -3,7 +3,7 @@ Every std::thread object is in one of two states: `joinable` or `unjoinable`.
 A joinable std::thread corresponds a thread, that is or could be running, that’s blocked or waiting to be scheduled, that have run to completion.   
 An unjoinable std::thread is a thread that is, default-constructed, std::thread object that have been moved from, std::thread that have been joined, std::thread that have been detached.
 
-One reason a std::thread’s joinability is important is that if the destructor for a joinable thread is invoked, execution of the program is terminated! You might wonder why the std::thread destructor behaves this way. It’s because the two other obvious options are arguably worse.    
+One reason a std::thread’s joinability is important is that `if the destructor of a joinable thread is invoked, execution of the program is terminated!` You might wonder why the std::thread destructor behaves this way. It’s because the two other obvious options are arguably worse.    
 An implicit join - performance anomalies        
 An implicit detach - may lead to undefined behaviour        
 The Standardization Committee thus essentially banned it by specifying that destruction of a joinable thread causes program termination.

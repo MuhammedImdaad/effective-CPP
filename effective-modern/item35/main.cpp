@@ -14,6 +14,7 @@ void learning()
 
     // 3. Condition Variables (std::condition_variable)
     std::thread t4(worker);
+    std::cout << "Main thread sleeps for 1 second\n";
     std::this_thread::sleep_for(std::chrono::seconds(1));
     {
         std::lock_guard<std::mutex> lock(mtx);

@@ -12,12 +12,13 @@ int main()
             std::cout << i << " ";
             std::this_thread::sleep_for(10ms);
         }
+        std::cout << std::endl;
         std::cout << __PRETTY_FUNCTION__ << std::endl;
     };
 
-    // fut refers to the shared state that was created due to a call to std::async
-    // task’s launch policy is std::launch::async
-    // fut is the last future referring to the shared state
+    // fut refers to the shared state that was created due to a call to std::async.
+    // task’s launch policy is std::launch::async.
+    // fut is the last future referring to the shared state.
     std::future<void> fut = std::async(std::launch::async, lambda, 100); 
     std::cout << __PRETTY_FUNCTION__ << std::endl;
 

@@ -5,13 +5,15 @@
 #include <string>
 #include <list>
 
-class Widget{};
+class Widget
+{
+};
 
-template <typename T> //old
+template <typename T> // old
 struct MyAllocListOld
 {
     typedef std::list<T> type;
 };
 
-template <typename T> //new
+template <typename T> // new
 using MyAllocList = std::list<T>;

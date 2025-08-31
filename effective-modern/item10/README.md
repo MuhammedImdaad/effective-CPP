@@ -1,8 +1,7 @@
 ## Prefer scoped enums to unscoped enums
-As a general rule, declaring a name inside curly braces limits the visibility of that name to the scope defined by the braces. Not so for the enumerators declared in C++98-style enums. Because scoped enums are declared via “enum class”, they’re sometimes referred to as enum classes.  
-Enumerators for unscoped enums implicitly convert to integral types.    
-scoped enums may be forward-declared. C++98 supports only enum definitions (where all enumerators are listed); enum declarations are not allowed.   
-the underlying type for a scoped enum is always known, and for unscoped enums, you can specify it. By default, the underlying type for scoped enums is int.
+As a general rule, declaring a name inside curly braces limits the visibility of that name to the scope defined by the braces. Not so for the enumerators declared in C++98-style enums. Enumerators for these `unscoped enums` implicitly convert to integral types. C++98 supports only enum definitions (where all enumerators are listed); enum declarations are not allowed. The underlying type for an unscoped enums you can specify.
+
+Because scoped enums are declared via “enum class”, they’re sometimes referred to as `enum classes`. scoped enums may be forward-declared. The underlying type for a scoped enum is always known. By default, the underlying type for scoped enums is int.
 
 It may surprise you to hear that there’s at least one situation where unscoped enums may be useful. That’s when referring to fields within C++11’s std::tuples.
 ### THINGS TO REMEMBER

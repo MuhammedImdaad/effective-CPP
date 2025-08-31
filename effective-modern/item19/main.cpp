@@ -5,9 +5,9 @@ int main()
     auto ptr = createWidget();
     std::cout << ptr.use_count() << std::endl; // 1
     auto ptr1 = ptr;
-    std::cout << ptr.use_count() << " " << ptr1.use_count() << std::endl; // 2
+    std::cout << ptr.use_count() << " " << ptr1.use_count() << std::endl; // 2 2
     auto ptr2 = std::move(ptr);
-    std::cout << ptr.use_count() << " " << ptr2.use_count() << std::endl; // still 2 not 3, ptr is moved(no longer valid)
+    std::cout << ptr.use_count() << " " << ptr2.use_count() << std::endl; // 0 2 ptr is moved(no longer valid)
     std::cout << ptr << " " << ptr1 << " " << ptr2 << " " << &ptr2 << std::endl; // ptr is null, ptr1 == ptr2 == new Widget
 
     std::unique_ptr<Widget> ptrU(new Widget);

@@ -7,7 +7,7 @@ class Widget
 public:
     Widget() { std::cout << __PRETTY_FUNCTION__ << std::endl; }
 
-    //copy
+    // copy
     Widget(const Widget &other) { std::cout << __PRETTY_FUNCTION__ << std::endl; }
     Widget &operator=(const Widget &other)
     {
@@ -15,7 +15,7 @@ public:
         return *this;
     }
 
-    //move
+    // move (parameters are not const)
     Widget(Widget &&other) { std::cout << __PRETTY_FUNCTION__ << std::endl; }
     Widget &operator=(Widget &&other)
     {
@@ -34,7 +34,7 @@ int main()
 {
     Widget widget1;
 
-    Widget widget2 (widget1);
+    Widget widget2(widget1);
     Widget widget3(std::move(widget1));
 
     widget2 = widget1;

@@ -13,19 +13,19 @@ int main()
             return value % divisor; });
     }
 
-    filters[0](45); // undefined behavior
+    filters[0](45); // 45 5 undefined behavior
 
     Widget w;
     w.addFilter(filters);
-    filters.back()(50);
+    filters.back()(50); // 50 2
     w.setDivisor(10);
-    filters.back()(45); // lambda changes
+    filters.back()(45); // 45 10 same lambda changes!
 
     {
         Widget w1;
         w1.addFilter(filters);
     }
 
-    filters.back()(100); // undefined behavior
+    filters.back()(100); // 100 2 undefined behavior
     return 0;
 }

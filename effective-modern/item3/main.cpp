@@ -11,6 +11,7 @@ class vector
 public:
     T &operator[](int index) {};
 };
+
 int main()
 {
     const int i = 0; // decltype(i) is const int

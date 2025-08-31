@@ -19,5 +19,5 @@ public:
 
 constexpr Point midPoint(const Point &p1, const Point &p2)
 {
-    return Point{p1.getX() / 2 + p2.getX() / 2, p2.getY() / 2 + p2.getY() / 2};
+    return Point{p1.getX() / 2 + p2.getX() / 2, p1.getY() / 2 + p2.getY() / 2};
 }

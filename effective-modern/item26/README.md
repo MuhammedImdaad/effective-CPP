@@ -7,7 +7,7 @@ short nameIdx;
 logAndAdd(nameIdx); //calls universal 
 ```
 
-The one taking a universal reference can deduce T to be short, thus yielding an exact match. The overload with an int parameter can match the short argument only with a promotion. As per the normal overload resolution rules, an exact match beats a match with a promotion, so the universal reference overload is invoked. Functions taking universal references are the greediest functions in C++. They instantiate to create exact matches for almost any type of argument. 
+The one taking a universal reference can deduce T to be short, thus yielding an exact match. The overload with an int parameter can match the short argument only with a promotion. As per the normal overload resolution rules, an exact match beats a match with a promotion, so the universal reference overload is invoked. `Functions taking universal references are the greediest functions in C++. They instantiate to create exact matches for almost any type of argument.` 
 
 ```
 class Person {
@@ -28,7 +28,7 @@ auto cloneOfP(p);                   // create new Person from non-const p;
                                     // this won't compile!
 ```
 
-Compilers are sworn to uphold the rules of C++, and the rules of relevance here are the ones governing the resolution of calls to overloaded functions. Hence compilers will generate a call to the better-matching function. “Copying” non-const lvalues of type Person is thus handled by the perfect-forwarding constructor, not the copy constructor.
+Compilers are sworn to uphold the rules of C++, and the rules of relevance here are the ones governing the resolution of calls to overloaded functions. Hence compilers will generate a call to the better-matching function. “Copying” non-const lvalues of type Person is thus handled by the perfect-forwarding constructor, not the copy constructor (const lvalues will not get resolved into universal functions). Here it won't get compiled since an object of type Person is used to create a String object via perfect forwarding function.  
 
 overloading on universal reference parameters is something you should avoid if at all possible.
 ### THINGS TO REMEMBER

@@ -16,7 +16,7 @@ bool isLucky(double) = delete;
 bool isLucky(bool) = delete;
 
 template <typename T>
-void func(T* ptr){};
+void func(T* ptr){}
 
 template <>
 void func<void>(void* ptr) = delete;

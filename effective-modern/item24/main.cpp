@@ -9,10 +9,10 @@ int main()
     // const auto &&var5 = var1; // error: cannot bind rvalue reference of type ‘const Widget&&’ to lvalue of type ‘Widget’
 
     Widget w;
-    func(w);
-    func(std::move(w));
+    func(w); // void func(T&&) [with T = Widget&]
+    func(std::move(w)); // void func(T&&) [with T = Widget]
 
-    onlyRvlaue(std::move(w));
+    onlyRvlaue(std::move(w)); // void onlyRvlaue(Widget&&)
     // onlyRvlaue(w);    //error: same as above
     return 0;
 }

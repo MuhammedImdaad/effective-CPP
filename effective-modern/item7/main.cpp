@@ -9,10 +9,12 @@ int main()
     int sum1{x + y + z}; // warning: narrowing conversion of ‘((x + y) + z)’ from ‘double’ to ‘int’
 
     // most vexing parse
-    A a(); // warning: empty parentheses were disambiguated as a function declaration
-    // a.func(); // error: expression must have class type but it has type "A (*)()"
-    A a1{}; // calls Widget ctor with no args; Empty braces mean no arguments, not an empty std::initializer_list
+    A a1; // object / variable
     a1.func();
+    A a2(); // warning: empty parentheses were disambiguated as a "function declaration"
+    // a2.func(); // error: expression must have class type but it has type "A (*)()"
+    A a3{}; // calls Widget ctor with no args; Empty braces mean no arguments, not an empty std::initializer_list
+    a3.func();
 
     Widget w1 (10, true); // calls first ctor
     Widget w2 (10, 5.0);  // calls second ctor

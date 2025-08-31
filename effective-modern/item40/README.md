@@ -1,6 +1,6 @@
 ## Use std::atomic for concurrency, volatile for special memory
 Once a `std::atomic` object has been constructed, operations on it behave as if they were inside a mutex-protected critical section, but the operations are generally implemented using special machine instructions that are more efficient than would be the case if a mutex were employed. Code using `volatile` guarantees virtually nothing in a multithreaded context.    
-As a general rule, compilers are permitted to reorder unrelated assignments. Even if compilers don’t reorder them, the underlying hardware might do it. However, the use of `std::atomic`s imposes restrictions on how code can be reordered. `Volatile` doesn’t impose the same code reordering restrictions. `Volatile` is useful for telling compilers that they’re dealing with memory that doesn’t behave normally. For normal memory operations, compiler can optimize the generated code by elimination techniques. 
+As a general rule, compilers are permitted to reorder unrelated assignments. Even if compilers don’t reorder them, the underlying hardware might do it. However, the use of `std::atomic` imposes restrictions on how code can be reordered. `Volatile` doesn’t impose the same code reordering restrictions. `Volatile` is useful for telling compilers that they’re dealing with memory that doesn’t behave normally. For normal memory operations, compiler can optimize the generated code by elimination techniques. 
 ```
 x = 10;               // write x, optimized away
 x = 20;               // write x again 
@@ -21,7 +21,8 @@ volatile std::atomic<int> vai;    // operations on vai are
                                   // atomic and can't be
                                   // optimized away
 ```
-This could be useful if `vai` corresponded to a memory-mapped I/O location that was concurrently accessed by multiple threads.
+This could be useful if `vai` corresponded to a memory-mapped I/O location that was concurrently accessed by multiple threads.   
+Do not confuse `volatile` with `mutable` either.
 
 ### THINGS TO REMEMBER
 * std::atomic is for data accessed from multiple threads without using mutexes. It’s a tool for writing concurrent software.

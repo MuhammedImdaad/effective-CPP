@@ -17,12 +17,6 @@ void detectOld()
     cv.notify_one();
 }
 
-void detect()
-{
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
-    std::this_thread::sleep_for(2s);
-}
-
 void reactOld()
 {
     // std::this_thread::sleep_for(3s); // to show hung issue
@@ -32,17 +26,24 @@ void reactOld()
     std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
-void react(int i = 0)
-{
-    std::this_thread::sleep_for(1s);
-    std::cout << __PRETTY_FUNCTION__ << i << std::endl;
-}
-
 void usingCV()
 {
     std::thread t(reactOld);
     detectOld();
     t.join();
+}
+
+void react(int i = 0)
+{
+    std::this_thread::sleep_for(1s);
+    std::lock_guard<std::mutex> lock(m);
+    std::cout << __PRETTY_FUNCTION__ << " - " << i << std::endl;
+}
+
+void detect()
+{
+    std::cout << __PRETTY_FUNCTION__ << std::endl;
+    std::this_thread::sleep_for(2s);
 }
 
 void usingFutSingleReact()
@@ -68,16 +69,16 @@ void usingFutMultiReact(int reacts)
     for (int i = 0; i < reacts; i++)
     {
         reactors.push_back(std::thread{[sharedFut, i]
-                                         {
-                                             sharedFut.wait();
-                                             react(i+1);
-                                         }});
+                                       {
+                                           sharedFut.wait();
+                                           react(i + 1);
+                                       }});
     }
 
     detect();
     p.set_value();
 
-    for (auto& fut : reactors)
+    for (auto &fut : reactors)
     {
         fut.join();
     }

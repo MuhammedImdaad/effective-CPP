@@ -1,9 +1,9 @@
 ## Use constexpr whenever possible
-Constexpr, When applied to objects, it’s essentially a beefed-up form of const, but when applied to functions, it has a quite different meaning. Conceptually, constexpr indicates a value that’s not only constant, it’s known during compilation.     
-constexpr `objects` are, in fact, const, and they do, in fact, have values that are known at compile time. Simply put, all constexpr objects are const, but not all const objects are constexpr.    
+Constexpr, When applied to objects, it’s essentially a beefed-up form of `const`, but when applied to functions, it has a quite different meaning. Conceptually, constexpr indicates a value that’s not only constant, it’s known during compilation.     
+constexpr `objects` are, in fact, const, and they do, in fact, have values that are `known at compile time`. Simply put, all constexpr objects are const, but not all const objects are constexpr.    
 However, constexpr `functions` need not produce results that are const or known during compilation! Usage scenarios for constexpr objects become more interesting when constexpr functions are involved. Such functions produce compile-time constants when they are called with compile-time constants. If they’re called with values not known until runtime, they produce runtime values. This means you don’t need two functions to perform the same operation, one for compile-time constants and one for all other values. The constexpr function does it all. In C++11, constexpr functions may contain no more than a single executable statement: a return. In C++14, the restrictions on constexpr functions are substantially looser.    
 constexpr functions are limited to taking and returning literal types, which essentially means types that can have values determined during compilation. In C++11, all built-in types except void qualify, but user-defined types may be literal, too, because constructors and other member functions may be constexpr.    
-The advice of this Item is to use constexpr whenever possible. It’s important to note that constexpr is part of an object’s or function’s interface.
+The advice of this Item is to `use constexpr whenever possible`. It’s important to note that constexpr is part of an object’s or function’s interface.
 ### THINGS TO REMEMBER
 * constexpr objects are const and are initialized with values known during compilation.
 * constexpr functions can produce compile-time results when called with arguments whose values are known during compilation.

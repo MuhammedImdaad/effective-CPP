@@ -10,7 +10,7 @@ public:
     RootsType roots() const
     {
         std::lock_guard<std::mutex> g{m};
-        if (!rootsAreValid)
+        if (rootsAreValid == false)
         { // if cache not valid
 
             // compute roots,

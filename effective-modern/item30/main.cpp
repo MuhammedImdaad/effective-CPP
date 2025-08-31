@@ -9,7 +9,7 @@ int main()
     // note:   couldn’t deduce template parameter ‘T’
 
     std::vector<int>(Widget::val);
-    // func(Widget::val); // undefined reference to `Widget::val'
+    // func(Widget::val); // undefined reference to `Widget::val', no memory allocated by defining
 
     f1(f);
     // func(f); // error: no matching function for call to ‘func(<unresolved overloaded function type>)’

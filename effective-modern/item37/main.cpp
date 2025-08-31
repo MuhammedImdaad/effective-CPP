@@ -5,6 +5,7 @@ int main()
 {
     // doWorkBad(3'000);
     doWorkGood(3'000, ThreadRAII::DtorAction::join);
+    doWorkGood(3'000, ThreadRAII::DtorAction::detach);
     std::cout << __PRETTY_FUNCTION__ << std::endl;
     return 0;
 }

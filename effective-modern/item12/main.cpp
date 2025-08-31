@@ -12,7 +12,7 @@ class Base {
     public:
       virtual void mf1() const override;
       virtual void mf2( int x) override;
-      virtual int mf3() && override;
+      virtual int mf3() && override; // only when *this is an rvalue : & only when *this is an lvalue
       void mf4() const override;
       int mf5();
     };
