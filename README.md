@@ -121,3 +121,20 @@
     8. Tweaks
     * Item 41: Consider pass by value for copyable parameters that are cheap to move and always copied
     * Item 42: Consider emplacement instead of insertion
+  
+* Effective C++17
+    * Item 1: Structured Bindings - Decompose objects elegantly
+    * Item 2: `if constexpr` - Conditional compilation made easy
+    -----------------------------------
+    * Item 6: `std::optional` - Express optional values explicitly
+    * Item 9: `std::string_view` - Efficient string references
+    
+    1. Additional Features (Coming Soon)
+    * Item 3: Class Template Argument Deduction (CTAD)
+    * Item 4: Fold Expressions
+    * Item 5: `inline` Variables
+    * Item 7: `std::variant` - Type-safe unions
+    * Item 8: `std::any` - Type-erased storage
+    * Item 10: Parallel Algorithms
+    * Item 11: `std::filesystem` - Portable file system operations
+    * And more...ppets from Scott Meyers' Effective C++ books and practical C++17 features.*
