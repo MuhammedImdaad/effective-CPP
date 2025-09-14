@@ -127,10 +127,10 @@
     * Item 2: `if constexpr` - Conditional compilation made easy
     * Item 3: `std::optional` - Express optional values explicitly
     * Item 4: `std::string_view` - Efficient string references
+    * Item 5: Class Template Argument Deduction (CTAD)
   
         -----------------------------------
     1. Additional Features (Coming Soon)
-    * Item 3: Class Template Argument Deduction (CTAD)
     * Item 4: Fold Expressions
     * Item 5: `inline` Variables
     * Item 7: `std::variant` - Type-safe unions

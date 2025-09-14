@@ -28,6 +28,7 @@ constexpr T gcd(T a, T b)
     }
     else
     {
+        // compile-time assertion checking
         static_assert(std::is_integral_v<T>, "GCD only works with integral types");
     }
 }
