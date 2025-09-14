@@ -125,8 +125,8 @@
 * Effective C++17
     * Item 1: Structured Bindings - Decompose objects elegantly
     * Item 2: `if constexpr` - Conditional compilation made easy
+    * Item 3: `std::optional` - Express optional values explicitly
     -----------------------------------
-    * Item 6: `std::optional` - Express optional values explicitly
     * Item 9: `std::string_view` - Efficient string references
     
     1. Additional Features (Coming Soon)

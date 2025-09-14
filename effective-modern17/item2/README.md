@@ -28,5 +28,5 @@
 ## Performance
 
 - Zero runtime overhead - all decisions made at compile time
-- Can reduce binary size by eliminating unused template instantiations
+- Can `reduce binary size` by eliminating unused template instantiations
 - Faster compilation compared to SFINAE alternatives
