@@ -11,7 +11,7 @@ std::optional<std::string> readFile(const std::string &filePath)
         return "result";
     }
 
-    return {}; // implicit conversion to std::optional
+    return {}; // implicit conversion to std::optional <- std::nullopt
 }
 int main()
 {
