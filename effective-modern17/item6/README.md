@@ -9,6 +9,7 @@
 1. **Type safety**: Knows which type it currently holds
 2. **Exception safety**: Strong exception safety guarantees
 3. **No undefined behavior**: Unlike C unions
+4. **Comparison with any**: Almost always better than std::any due to static storage and type safety
 
 ## Benefits
 
