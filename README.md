@@ -127,14 +127,6 @@
     * Item 2: `if constexpr` - Conditional compilation made easy
     * Item 3: `std::optional` - Express optional values explicitly
     * Item 4: `std::string_view` - Efficient string references
-    * Item 5: Class Template Argument Deduction (CTAD)
-  
-        -----------------------------------
-    1. Additional Features (Coming Soon)
-    * Item 4: Fold Expressions
-    * Item 5: `inline` Variables
-    * Item 7: `std::variant` - Type-safe unions
-    * Item 8: `std::any` - Type-erased storage
-    * Item 10: Parallel Algorithms
-    * Item 11: `std::filesystem` - Portable file system operations
-    * And more...ppets from Scott Meyers' Effective C++ books and practical C++17 features.*
+    * Item 5: Class Template Argument Deduction (CTAD) - Let the compiler deduce template arguments
+    * Item 6: `std::variant` - Type-safe unions
+    * Item 7: C++17 `if init` for Scoped Conditions
